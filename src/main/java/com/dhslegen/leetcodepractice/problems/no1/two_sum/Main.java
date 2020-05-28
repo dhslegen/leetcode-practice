@@ -1,4 +1,4 @@
-package com.dhslegen.leetcodepractice.problems.two_sum;
+package com.dhslegen.leetcodepractice.problems.no1.two_sum;
 
 import java.util.Arrays;
 
