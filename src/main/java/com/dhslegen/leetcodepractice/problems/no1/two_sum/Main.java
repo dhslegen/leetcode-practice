@@ -22,11 +22,13 @@ public class Main {
 
     public static void main(String[] args) {
         int[] nums = {2, 7, 11, 5};
-        int target = 9;
+        int target = 16;
         int[] ints = twoSum(nums, target);
         System.out.println("结果为：" + Arrays.toString(ints));
         int[] ints1 = twoSum1(nums, target);
         System.out.println("结果为：" + Arrays.toString(ints1));
+        int[] ints2 = twoSum2(nums, target);
+        System.out.println("结果为：" + Arrays.toString(ints2));
     }
 
     /**
