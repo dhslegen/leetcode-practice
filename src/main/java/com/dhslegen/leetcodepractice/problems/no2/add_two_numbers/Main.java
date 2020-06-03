@@ -25,7 +25,38 @@ package com.dhslegen.leetcodepractice.problems.no2.add_two_numbers;
 public class Main {
 
     public static void main(String[] args) {
+        ListNode listNode1 = new ListNode(9);
+        ListNode listNode2 = new ListNode(6);
+        ListNode listNode3 = new ListNode(9);
+        listNode3.next = listNode2;
+        ListNode listNode = addTwoNumbers(listNode1, listNode3);
+        System.out.println(listNode);
+    }
 
+    private static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        ListNode p = l1;
+        ListNode q = l2;
+        ListNode dummyHead = new ListNode(0);
+        ListNode currentNode = dummyHead;
+        int carry = 0;
+        while (p != null || q != null) {
+            int i = p != null ? p.value : 0;
+            int j = q != null ? q.value : 0;
+            int sum = i + j + carry;
+            carry = sum / 10;
+            currentNode.next = new ListNode(sum % 10);
+            currentNode = currentNode.next;
+            if (p != null) {
+                p = p.next;
+            }
+            if (q != null) {
+                q = q.next;
+            }
+        }
+        if (carry > 0) {
+            currentNode.next = new ListNode(carry);
+        }
+        return dummyHead.next;
     }
 
 }
