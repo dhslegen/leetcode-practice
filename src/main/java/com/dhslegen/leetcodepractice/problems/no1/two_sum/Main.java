@@ -30,7 +30,7 @@ public class Main {
         int[] ints = twoSum(nums, target);
         System.out.println("暴力法结果为：" + Arrays.toString(ints));
         int[] ints1 = twoSum1(nums, target);
-        System.out.println("两边哈希表结果为：" + Arrays.toString(ints1));
+        System.out.println("两遍哈希表结果为：" + Arrays.toString(ints1));
         int[] ints2 = twoSum2(nums, target);
         System.out.println("一遍哈希表结果为：" + Arrays.toString(ints2));
     }
@@ -66,7 +66,7 @@ public class Main {
     }
 
     /**
-     * <h2>两边哈希表
+     * <h2>两遍哈希表
      * <p>
      * 为了对运行时间复杂度进行优化，我们需要一种更有效的方法来检查数组中是否存在目标元素。如果存在，我们需要找出它的索引。保持数组中的每个元素与其索引相互对应的最好方法是什么？哈希表。
      * <p>
@@ -79,11 +79,11 @@ public class Main {
      * <h3>复杂度分析：
      * <p>
      * 时间复杂度：O(n)，
-     * 我们把包含有 nn 个元素的列表遍历两次。由于哈希表将查找时间缩短到 O(1) ，所以时间复杂度为 O(n)。
+     * 我们把包含有 n 个元素的列表遍历两次。由于哈希表将查找时间缩短到 O(1) ，所以时间复杂度为 O(n)。
      * <p>
      * <p>
      * 空间复杂度：O(n)，
-     * 所需的额外空间取决于哈希表中存储的元素数量，该表中存储了 nn 个元素。
+     * 所需的额外空间取决于哈希表中存储的元素数量，该表中存储了 n 个元素。
      *
      * @param nums   整数数组
      * @param target 目标值
