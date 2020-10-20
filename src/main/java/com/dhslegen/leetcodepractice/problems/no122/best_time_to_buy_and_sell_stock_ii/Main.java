@@ -44,10 +44,15 @@ public class Main {
     public static void main(String[] args) {
         int[] prices = {7, 1, 5, 3, 6, 4};
         int[] prices1 = {7, 6, 4, 3, 1};
-        int maxProfit = maxProfit(prices);
-        int maxProfit1 = maxProfit(prices1);
-        System.out.println(maxProfit);
-        System.out.println(maxProfit1);
+        // 暴力递归法
+        System.out.println(maxProfit(prices));
+        System.out.println(maxProfit(prices1));
+        // 峰谷法
+        System.out.println(maxProfit1(prices));
+        System.out.println(maxProfit1(prices1));
+        // 简单的一次遍历
+        System.out.println(maxProfit2(prices));
+        System.out.println(maxProfit2(prices1));
     }
 
     /**
